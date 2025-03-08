@@ -104,7 +104,7 @@
       </div>
 
       <h2 class="subtitle has-text-centered" style="margin-top: 2rem;">
-        We propose CombatVLA, the first efficient visual-language action model designed for combat tasks in 3D action-role playing games. 
+        We propose CombatVLA, the first efficient visual-language action model designed for combat tasks in 3D action role-playing games. 
         For efficient decision making, our CombatVLA is a 3B model that processes visual inputs and outputs a sequence of actions to control 
         the game (including keyboard and mouse operations). Above are fully anonymous demo videos showcasing the practical tests of CombatVLA in "Black Myth: Wukong" and "Sekiro: Shadows Die Twice." 
         The first video demonstrates tasks 1 to 13, while the second video compares our model's inference speed with the baseline.
@@ -124,12 +124,11 @@
         <div class="content has-text-justified">
           <p>
             Recent advances in Vision-Language-Action models (VLAs) have expanded the capabilities of embodied intelligence. 
-            However, significant challenges remain in real-time decision-making in complex 3D environments, which demand second responses, 
-            high-resolution perception, and tactical reasoning under dynamic conditions. To advance the field, we introduce CombatVLA, 
-            an efficient VLA model optimized for 3D combat gameplay. Specifically, our CombatVLA is a 3B model trained on video-action pairs collected by an action tracker, 
-            where the data is formatted as action-of-thought (AoT) sequences. Thereafter, CombatVLA seamlessly integrates into an action execution framework, 
-            allowing efficient inference through our custom strategies, including adaptive frame sampling and truncated AoT. Experimental results demonstrate 
-            that CombatVLA not only outperforms all existing models on the combat understanding benchmark but also achieves a 50-fold acceleration in game combat. 
+            However, significant challenges remain in real-time decision-making in complex 3D environments, which demand second-level responses, high-resolution perception, 
+            and tactical reasoning under dynamic conditions. To advance the field, we introduce CombatVLA, an efficient VLA model optimized for combat tasks in 3D action role-playing games(ARPGs). 
+            Specifically, our CombatVLA is a 3B model trained on video-action pairs collected by an action tracker, where the data is formatted as action-of-thought (AoT) sequences. 
+            Thereafter, CombatVLA seamlessly integrates into an action execution framework, allowing efficient inference through our truncated AoT strategy. 
+            Experimental results demonstrate that CombatVLA not only outperforms all existing models on the combat understanding benchmark but also achieves a 50-fold acceleration in game combat. 
             Moreover, it has a higher task success rate than human players. We will open-sourcing all resources, including the action tracker, dataset, model weights, training code, and framework implementation.
           </p>
         </div>
