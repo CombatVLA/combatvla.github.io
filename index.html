@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="VLA, VLM, Action, Game, Agent">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CombatVLA</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CombatVLA: An Efficient Vision-Language-Action Model for Combat Tasks in 3D Action Role-Playing Games</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <strong>Anonymous Author(s)</strong>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <span class="link-block">
+                <a href="https://combatvla.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              <span class="link-block">
+                <a href="https://combatvla.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Dataset</span>
+                </a> 
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="video-block" style="margin-bottom: 3rem;">
+        <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
+          Task Demonstrations (Tasks 1-13)
+        </h3>
+        <div style="text-align: center;">
+          <video controls width="840" height="472">
+            <source src="./static/videos/task1_13.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="video-block">
+        <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
+          Inference Speed Comparison
+        </h3>
+        <div style="text-align: center;">
+          <video controls width="840" height="472">
+            <source src="./static/videos/comparison.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <h2 class="subtitle has-text-centered" style="margin-top: 2rem;">
+        We propose CombatVLA, the first efficient visual-language action model designed for combat tasks in 3D action-role playing games. 
+        For efficient decision making, our CombatVLA is a 3B model that processes visual inputs and outputs a sequence of actions to control 
+        the game (including keyboard and mouse operations). Above are fully anonymous demo videos showcasing the practical tests of CombatVLA in "Black Myth: Wukong" and "Sekiro: Shadows Die Twice." 
+        The first video demonstrates tasks 1 to 13, while the second video compares our model's inference speed with the baseline.
+      </h2>
+    </div>
+  </div>
+</section>
+
+      
+    
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in Vision-Language-Action models (VLAs) have expanded the capabilities of embodied intelligence. 
+            However, significant challenges remain in real-time decision-making in complex 3D environments, which demand second responses, 
+            high-resolution perception, and tactical reasoning under dynamic conditions. To advance the field, we introduce CombatVLA, 
+            an efficient VLA model optimized for 3D combat gameplay. Specifically, our CombatVLA is a 3B model trained on video-action pairs collected by an action tracker, 
+            where the data is formatted as action-of-thought (AoT) sequences. Thereafter, CombatVLA seamlessly integrates into an action execution framework, 
+            allowing efficient inference through our custom strategies, including adaptive frame sampling and truncated AoT. Experimental results demonstrate 
+            that CombatVLA not only outperforms all existing models on the combat understanding benchmark but also achieves a 50-fold acceleration in game combat. 
+            Moreover, it has a higher task success rate than human players. We will open-sourcing all resources, including the action tracker, dataset, model weights, training code, and framework implementation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline of CombatVLA</h2>
+        <div class="content has-text-justified">
+          <img src="./static/videos/combatvla.png" alt="CombatVLA">
+          <p>
+            <br>
+            (a) An action tracker collects human data on keyboard and mouse use. (b) Three types of AoT training data collected by the action tracker are used for progressive learning. 
+            (c) Combat understanding benchmark (namely CUBench) assesses the model's combat IQ in three areas: gathering, comprehension, and reasoning. 
+            (d) CombatVLA model is trained on AoT data with the constraint of action alignment loss and modality contrastive loss. (e) Deployment of CombatVLA to operate real PCs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+
+</section>
+
+
+</body>
+</html>
